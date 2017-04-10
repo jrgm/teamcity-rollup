@@ -1,0 +1,20 @@
+{
+  "name": "teamcity-rollup",
+  "version": "1.0.0",
+  "description": "Prepare report on flaky tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint *.js lib/*.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "author": "John Morrison <jrgmorrison@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "3.4.7",
+    "commander": "2.9.0",
+    "eslint": "3.13.0",
+    "teamcity-rest-api": "git://github.com/jrgm/node-teamcity-api.git#testsapi"
+  }
+}
