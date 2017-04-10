@@ -10,6 +10,7 @@ function options() {
     .option('-b --build-type-id [id]', 'Name of the test configuration to summarize', 'fxa_StageTests')
     .option('-u --username [username]', 'Teamcity Username', process.env.TEAMCITY_USERNAME)
     .option('-p --password [password]', 'Teamcity Password', process.env.TEAMCITY_PASSWORD)
+    .option('-t --timeout [timeout]', 'Teamcity API timeout', 60000)
     .option('--url [url]', 'Teamcity scheme://hostname', 'https://tc-test.dev.lcip.org')
     .parse(process.argv)
 
@@ -18,7 +19,7 @@ function options() {
 
 fetch(options(), (err, result) => {
   if (err) {
-    throw err
+    return console.log('Failed to fetch test results: ', err.message, err.stack || '')
   }
 
   Object.keys(result).sort((a, b) => result[b] - result[a]).forEach((key) => {

@@ -10,4 +10,5 @@ Summarize test failure counts in last N test runs
     -b --build-type-id [id]   Name of the test configuration to summarize (default: 'fxa_StageTests')
     -u --username [username]  Teamcity Username (default: process.env.TEAMCITY_USERNAME)
     -p --password [password]  Teamcity Password (default: process.env.TEAMCITY_PASSWORD)
+    -t --timeout [timeout]    Teamcity API timeout (default: 60000ms)
     --url [url]               Teamcity scheme://hostname (default: 'https://tc-test.dev.lcip.org')
