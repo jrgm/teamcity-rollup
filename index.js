@@ -2,7 +2,7 @@
 'use strict'
 
 const commander = require('commander')
-var fetch = require('./lib')
+const fetch = require('./lib')
 
 function options() {
   commander
